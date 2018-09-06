@@ -26,6 +26,36 @@ This repository wants to extend the useful Bootstrap 4 utilities with some new s
 
 <br/>
 
+# How to use
+
+Install it:
+
+`yarn add bootstrap4-utils-extended`
+<br/>
+or
+<br/>
+`npm -i bootstrap4-utils-extended`
+
+<br/>
+
+Add to your project:
+
+```scss
+@import "./custom_variables.scss";
+@import "bootstrap4-utils-extended/b4ue.scss";
+@import "bootstrap/scss/_utilities.scss";
+```
+> ##### Instructions
+>- First create an SCSS with your custom **$theme-colors**, **grid-breakpoints** and **$spacers** and import it
+>- Then add the **bootstrap4-utils-extended** SCSS (**bootstrap** variables are already included here)
+>- And finally add **bootstrap** utilities
+
+<br/>
+
+------
+
+<br/>
+
 # Documentation
 
 <br/>
@@ -128,6 +158,20 @@ You can use one of the following classes to manipulate selection and cursor func
 `cursor-pointer` (_enables cursor pointer_)
 
 `disable-select` (_disables element selection with cursor_)
+
+<br/>
+
+------
+
+<br/>
+
+# How to contribute
+
+Fork this repo, clone it on your machine, work on the **dev** branch and create a pull request.
+<br/><br/>
+To work on it, it's required to execute a `yarn install`.
+<br/>
+To build it simply execute `yarn build`.
 
 <br/>
 
