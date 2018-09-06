@@ -1,0 +1,10 @@
+.font-weight-extrabold { font-weight: 900 !important; }
+.text-underlined { text-decoration: underline !important; }
+
+@each $index, $value in $shadows {
+	.text-shadow-#{$index} { text-shadow: #{$value} !important; }
+}
+
+@each $index, $value in $text-spacers {
+	.text-spacing-#{$index} { letter-spacing: #{$value} !important; }
+}

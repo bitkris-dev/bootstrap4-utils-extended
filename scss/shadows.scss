@@ -1,0 +1,7 @@
+@each $index, $value in $shadows {
+	.box-shadow-#{$index} { box-shadow: #{$value} !important; }
+}
+
+@each $color, $hex in $theme-colors {
+	.box-shadow-#{$color} { box-shadow: 0px 4px 8px transparentize($hex, 0.4) !important; }
+}

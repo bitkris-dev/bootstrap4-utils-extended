@@ -1,0 +1,15 @@
+@each $breakpoint in map-keys($grid-breakpoints) {
+	@include media-breakpoint-up($breakpoint) {
+	  $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+		// offmove
+		@each $classname in (off) {
+			@each $size, $length in $spacers {
+				.#{$classname}t#{$infix}-#{$size} { transform: translateY(-$length); &.off-fixed { margin-bottom: -$length !important; } }
+				.#{$classname}b#{$infix}-#{$size} { transform: translateY($length); &.off-fixed { margin-top: -$length !important; } }
+				.#{$classname}l#{$infix}-#{$size} { transform: translateX(-$length); &.off-fixed { margin-right: -$length !important; } }
+				.#{$classname}r#{$infix}-#{$size} { transform: translateX($length); &.off-fixed { margin-left: -$length !important; } }
+			}
+		}
+	}
+}

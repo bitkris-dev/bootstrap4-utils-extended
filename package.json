@@ -1,0 +1,33 @@
+{
+  "name": "bootstrap4-utils-extended",
+  "version": "0.1.0",
+  "description": "Extend the Bootstrap 4 Utilities with new classes!",
+  "author": "Kristian Barrese <kristian.webdeveloper@gmail.com>",
+  "license": "MIT",
+  "main": "index.js",
+  "files": [
+    "scss",
+    "css"
+  ],
+  "scripts": {
+    "build": "node-sass ./b4ue.scss > css/b4ue.css && node-sass --output-style=compressed ./b4ue.scss > css/b4ue.min.temp.css && postcss css/b4ue.min.temp.css > css/b4ue.min.css && del css/b4ue.min.temp.css"
+  },
+  "keywords": [
+    "bootstrap",
+    "bootstrap4",
+    "utils",
+    "extension",
+    "atomic",
+    "css",
+    "scss"
+  ],
+  "devDependencies": {
+    "bootstrap": "^4.1.3",
+    "css-mqpacker": "^6.0.2",
+    "cssnano": "^3.10.0",
+    "del-cli": "^1.1.0",
+    "node-sass": "^4.5.3",
+    "postcss-cli": "^5.0.0"
+  },
+  "dependencies": {}
+}

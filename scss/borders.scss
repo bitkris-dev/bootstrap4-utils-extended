@@ -1,0 +1,15 @@
+@each $breakpoint in map-keys($grid-breakpoints) {
+	@include media-breakpoint-up($breakpoint) {
+	  $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+		// offmove
+		@each $classname in (border) {
+			@each $colorname, $color in $theme-colors {
+				.#{$classname}-top#{$infix}-#{$colorname} { border-top: 1px $color solid; }
+				.#{$classname}-bottom#{$infix}-#{$colorname} { border-bottom: 1px $color solid; }
+				.#{$classname}-left#{$infix}-#{$colorname} { border-left: 1px $color solid; }
+				.#{$classname}-right#{$infix}-#{$colorname} { border-right: 1px $color solid; }
+			}
+		}
+	}
+}

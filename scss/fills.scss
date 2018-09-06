@@ -1,0 +1,3 @@
+@each $color, $hex in $theme-colors {
+	.svg-#{$color} { &, & * { fill: $hex !important; color: $hex !important; } }
+}
